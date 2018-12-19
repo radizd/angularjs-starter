@@ -1,6 +1,7 @@
 import { module } from "angular"
 import uiRoter from "@uirouter/angularjs";
 import { AppRootComponent } from "./components/app-root/app-root-component";
+import { AppMenuComponent } from "./components/app-menu/app-menu-component";
 
 let requires = [uiRoter];
 
@@ -35,6 +36,7 @@ export const app = module("angularjs.starter", requires)
     .config(config)
     .run(run)
     .component('appRoot', AppRootComponent)
+    .component('appMenu', AppMenuComponent)
     .name;
 
 
