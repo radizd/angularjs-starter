@@ -1,11 +1,10 @@
 import { module } from "angular"
 import uiRoter from "@uirouter/angularjs";
-import oclazyload from "oclazyload";
 import { AppRootComponent } from "./components/app-root/app-root-component";
 import { AppMenuComponent } from "./components/app-menu/app-menu-component";
-import { AboutModuleInitialization } from "./modules/about"
+import { AboutModule } from "./modules/about"
 
-let requires = [uiRoter, oclazyload];
+let requires = [uiRoter, AboutModule];
 
 let config = ($locationProvider, $stateProvider) => {
     $locationProvider
@@ -17,8 +16,6 @@ let config = ($locationProvider, $stateProvider) => {
         url: '/hello',
         template: '<h3>hello world!</h3>'
     }
-
-    AboutModuleInitialization($stateProvider);
 
     $stateProvider.state(helloState);
 };

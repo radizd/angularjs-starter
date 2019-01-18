@@ -1,6 +1,2 @@
-import { AboutState } from "./about-states";
 
-export const AboutModuleInitialization = ($stateProvider) => {
-
-    $stateProvider.state(AboutState);
-}   
+export { AboutModule } from "./about.module"
